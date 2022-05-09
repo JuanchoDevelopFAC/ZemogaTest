@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostsViewController" customModule="ZemogaTest" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="XpN-ew-Slg" id="vqh-5t-8sU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-2u-AFT">
+                    <rect key="frame" x="20" y="44" width="374" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOe-KO-wDm" userLabel="Posts">
+                            <rect key="frame" x="0.0" y="0.0" width="187" height="40"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Posts"/>
+                            <connections>
+                                <action selector="changeView:" destination="-1" eventType="touchUpInside" id="WPD-S3-hAo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y29-93-gaS" userLabel="favorites">
+                            <rect key="frame" x="187" y="0.0" width="187" height="40"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Favorites"/>
+                            <connections>
+                                <action selector="changeView:" destination="-1" eventType="touchUpInside" id="jwS-n3-GF5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="y29-93-gaS" firstAttribute="width" secondItem="cnC-2u-AFT" secondAttribute="width" multiplier="0.5" id="05F-3l-4yp"/>
+                        <constraint firstItem="SOe-KO-wDm" firstAttribute="width" secondItem="cnC-2u-AFT" secondAttribute="width" multiplier="0.5" id="0Hy-Oi-bIr"/>
+                        <constraint firstAttribute="trailing" secondItem="y29-93-gaS" secondAttribute="trailing" id="6tf-yw-WYa"/>
+                        <constraint firstAttribute="height" constant="40" id="Bpb-2G-ooe"/>
+                        <constraint firstItem="SOe-KO-wDm" firstAttribute="leading" secondItem="cnC-2u-AFT" secondAttribute="leading" id="FBJ-HJ-R63"/>
+                        <constraint firstItem="SOe-KO-wDm" firstAttribute="height" secondItem="cnC-2u-AFT" secondAttribute="height" id="FdR-ou-Juz"/>
+                        <constraint firstItem="y29-93-gaS" firstAttribute="top" secondItem="cnC-2u-AFT" secondAttribute="top" id="mg3-LY-J3m"/>
+                        <constraint firstItem="SOe-KO-wDm" firstAttribute="top" secondItem="cnC-2u-AFT" secondAttribute="top" id="wmy-Hd-LT9"/>
+                        <constraint firstItem="y29-93-gaS" firstAttribute="height" secondItem="cnC-2u-AFT" secondAttribute="height" id="xgM-Jk-rHz"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XpN-ew-Slg" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="99" width="414" height="797"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="XpN-ew-Slg" firstAttribute="top" secondItem="cnC-2u-AFT" secondAttribute="bottom" constant="15" id="1Cw-Y7-1yF"/>
+                <constraint firstAttribute="bottom" secondItem="XpN-ew-Slg" secondAttribute="bottom" id="4kw-U7-Nco"/>
+                <constraint firstItem="XpN-ew-Slg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8js-Ed-pcV"/>
+                <constraint firstItem="cnC-2u-AFT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Lj3-a1-Nmm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cnC-2u-AFT" secondAttribute="trailing" constant="20" id="f2S-uW-WOV"/>
+                <constraint firstItem="cnC-2u-AFT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="s8f-FF-ZFV"/>
+                <constraint firstItem="XpN-ew-Slg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="x4G-JN-cDG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
